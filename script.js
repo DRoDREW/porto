@@ -236,14 +236,14 @@ document.querySelectorAll('a, button').forEach(el => {
       desc: "Platform digital untuk komunitas kreatif di kampus. Desain kolaboratif kelompok mencakup sistem manajemen event, portofolio anggota, dan forum diskusi."
     },
     {
-      title: "Front-end UTS",
+      title: "WAYANTARA",
       src: "assets/front_end_uts.png",
-      link: "https://github.com/DRoDREW/UTS-Front_end_kelompok10",
+      link: "https://uts-front-end-kelompok10-1.vercel.app/",
       tags: ["Front-end", "CSS"],
       desc: "Proyek UTS mata kuliah Front-end Development secara kelompok. Membangun website responsif dengan layout CSS Grid/Flexbox, animasi CSS, dan komponen interaktif tanpa framework."
     },
     {
-      title: "Back-end UAS",
+      title: "WEB UNTAR",
       src: "assets/backend.jpeg",
       link: "https://github.com/DRoDREW/UAS-BACKEND",
       tags: ["Back-end", "API"],
