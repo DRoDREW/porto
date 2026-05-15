@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Andrew</title>
+  
+  <!-- Favicon Huruf A -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='85' font-family='Georgia, serif' font-weight='bold' font-style='italic' fill='%230F0E0C'>A</text></svg>">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Geist+Mono:wght@300;400;500;600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+  
+  <!-- Link to External CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Tooltip for GitHub Calendar -->
+  <div class="cal-tooltip" id="cal-tooltip"></div>
+
+  <!-- ════ SPLASH ════ -->
+  <div id="splash">
+    <div id="splash-magnet">
+      <div id="splash-magnet-inner"></div>
+    </div>
+    <h1 id="splash-name">Andrew.</h1>
+  </div>
+
+  <!-- ════ HEADER ════ -->
+  <header>
+    <a href="#" class="logo">Andrew</a>
+    <nav>
+      <a href="#about">Tentang</a>
+      <a href="#projects">Proyek</a>
+      <a href="#contact">Kontak</a>
+    </nav>
+    <a href="#contact" class="header-cta">Sapa Saya</a>
+  </header>
+
+  <!-- ════ HERO ════ -->
+  <section id="hero">
+    <div class="hero-left">
+      <div class="hero-badge">Mahasiswa Teknik Informatika &nbsp;·&nbsp; Untar 2024</div>
+
+      <h1 class="hero-title">
+        <span class="word" style="animation-delay:2.2s">Halo,</span>
+        <span class="word" style="animation-delay:2.35s">&nbsp;saya</span>
+        <span class="word" style="animation-delay:2.5s">&nbsp;Andrew.</span>
+        <span class="line2">
+          <span class="word" style="animation-delay:2.65s">Saya&nbsp;</span><span class="word" style="animation-delay:2.75s">merancang&nbsp;</span><span class="word" style="animation-delay:2.85s">&amp;&nbsp;</span><span class="word" style="animation-delay:2.95s">membangun</span>
+          <br/>
+          <span class="word" style="animation-delay:3.05s">pengalaman&nbsp;</span><span class="word" style="animation-delay:3.15s">digital.</span>
+        </span>
+      </h1>
+
+      <p class="hero-sub">
+        Sedang menempuh pendidikan di Universitas Tarumanagara. Bersemangat dalam mempelajari <em>software engineering</em>, <em>machine learning</em>, dan UI/UX Design.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          Lihat Karya
+        </a>
+        <a href="https://github.com/DRoDREW" target="_blank" class="btn-secondary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-photo-col">
+      <canvas id="magnet-bg" width="460" height="460"></canvas>
+      <div class="hero-photo-frame">
+        <img src="assets/muka.jpeg" alt="Andrew" />
+      </div>
+      <div class="photo-badge">
+        <strong>10+ Projects</strong>
+        Machine Learning • Design • Web
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ VELOCITY SCROLL ════ -->
+  <div id="velocity-section">
+    <div class="velocity-row" id="vel-row-1">
+      <div class="velocity-track" id="vel-track-1"></div>
+    </div>
+    <div class="velocity-row" id="vel-row-2">
+      <div class="velocity-track" id="vel-track-2"></div>
+    </div>
+  </div>
+
+  <!-- ════ ABOUT ════ -->
+  <section id="about">
+    <div class="about-label reveal">
+      Perjalanan<br/><span>Akademik.</span>
+    </div>
+
+    <div class="about-content">
+      <div class="stats-row reveal">
+        <div class="stat">
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Proyek</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">4</div>
+          <div class="stat-label">Bahasa</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">2</div>
+          <div class="stat-label">Design Tools</div>
+        </div>
+      </div>
+
+      <p class="about-text reveal">
+        Sebagai mahasiswa <strong>Teknik Informatika</strong> di Universitas Tarumanagara, saya membangun pondasi yang kuat di bidang teknologi. Saya sangat tertarik pada bagaimana kode dapat memecahkan masalah dunia nyata.
+      </p>
+      <p class="about-text reveal reveal-delay-1">
+        Eksplorasi saya mencakup berbagai aspek mulai dari <strong>Front-end</strong> modern, arsitektur <strong>Back-end</strong>, hingga fundamental <strong>Machine Learning</strong> seperti Neural Networks. Saya juga aktif merancang antarmuka di Figma untuk memastikan pengalaman pengguna yang optimal.
+      </p>
+
+      <div class="skills-row reveal reveal-delay-2">
+        <span class="skill-chip">Python</span>
+        <span class="skill-chip">Java</span>
+        <span class="skill-chip">JavaScript</span>
+        <span class="skill-chip">HTML / CSS</span>
+        <span class="skill-chip">C++</span>
+        <span class="skill-chip">MongoDB</span>
+        <span class="skill-chip">Git & GitHub</span>
+        <span class="skill-chip">Figma</span>
+        <span class="skill-chip">Neural Networks</span>
+        <span class="skill-chip">REST API</span>
+      </div>
+
+      <div class="github-wrapper reveal reveal-delay-3">
+        <div class="github-header">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          <span class="github-user">@DRoDREW</span>
+          <span class="github-count" id="gh-count">Memuat...</span>
+        </div>
+        <div id="github-calendar">
+          <div class="cal-loading"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ PROJECTS ════ -->
+  <section id="projects">
+    <div class="projects-header reveal">
+      <h2>Proyek Pilihan.</h2>
+      <p>Karya akademik, eksplorasi pribadi, dan kolaborasi.</p>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll untuk menjelajahi</span>
+      <div class="scroll-hint-line"></div>
+    </div>
+    <div id="cards-container"></div>
+  </section>
+
+  <!-- ════ CONTACT ════ -->
+  <section id="contact">
+    <p class="contact-label reveal">Mari Berkolaborasi</p>
+    <h2 class="reveal">Punya<br/>Ide Besar?</h2>
+    <p class="reveal">Terbuka untuk diskusi proyek, kerja kelompok, peluang magang, atau sekadar berbagi wawasan tentang teknologi.</p>
+    <a href="mailto:andrewgeorge0619@gmail.com" class="contact-btn reveal">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      Sapa Andrew
+    </a>
+  </section>
+
+  <!-- ════ FOOTER ════ -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="footer-logo">Andrew.</a>
+        <p class="footer-tagline">Mahasiswa Teknik Informatika yang bersemangat membangun pengalaman digital yang bermakna — dari kode hingga desain.</p>
+        <div class="footer-social">
+          <a href="https://github.com/DRoDREW" target="_blank" title="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.figma.com/@2fde3234_de5c_4" target="_blank" title="Figma">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.02 3.019 3.02h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V8.981H8.148zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047 4.539-4.563 4.539zm-.024-7.51a3.023 3.023 0 0 0-3.019 3.019c0 1.665 1.365 3.019 3.044 3.019 1.705 0 3.093-1.376 3.093-3.068v-2.97H8.148zm7.704 0h-.098c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.392 4.49zm-.098-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h.098c1.648 0 2.921-1.297 2.921-2.95s-1.335-3.088-3.019-3.088z"/></svg>
+          </a>
+          <a href="mailto:andrewgeorge0619@gmail.com" title="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="#about">Tentang Saya</a></li>
+          <li><a href="#projects">Proyek Pilihan</a></li>
+          <li><a href="#contact">Kontak</a></li>
+          <li><a href="https://github.com/DRoDREW" target="_blank">GitHub Profile</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Proyek</h4>
+        <ul>
+          <li><a href="https://github.com/DRoDREW/self-driving-car-nn-java" target="_blank">Self-Driving Car NN</a></li>
+          <li><a href="https://github.com/DRoDREW/EARLY-STROKE-DETECTION-ML" target="_blank">Stroke Detection ML</a></li>
+          <li><a href="https://github.com/ToastF/VaultBank" target="_blank">VaultBank</a></li>
+          <li><a href="https://github.com/DRoDREW/UAS-BACKEND" target="_blank">Back-end UAS</a></li>
+          <li><a href="https://github.com/DRoDREW/UTS-Front_end_kelompok10" target="_blank">Front-end UTS</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Status</h4>
+        <div class="avail-dot">Tersedia untuk kolaborasi</div>
+        <p class="avail-text">Terbuka untuk proyek, magang, atau diskusi seputar teknologi &amp; desain.</p>
+        <ul style="margin-top:20px;">
+          <li><a href="mailto:andrew@example.com">andrewgeorge0619@gmail.com</a></li>
+          <li><a href="#">Jakarta, Indonesia</a></li>
+          <li><a href="https://www.figma.com/@2fde3234_de5c_4" target="_blank">Figma Portfolio</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Andrew Anstendyk Takalamingan. All rights reserved.</span>
+      <span class="footer-made">Dibuat dengan harapan tinggi.</span>
+    </div>
+  </footer>
+
+  <!-- Link to External JS -->
+  <script src="script.js"></script>
+</body>
+</html>
