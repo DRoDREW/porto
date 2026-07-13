@@ -187,6 +187,27 @@ document.querySelectorAll('a, button').forEach(el => {
 (function initCards() {
   const projects = [
     {
+      title: "Klasifikasi Emosi (CNN)",
+      src: "assets/emotion.png", // Kosongkan atau isi path gambar Anda
+      link: "https://github.com/DRoDREW/klasifikasi-emosi",
+      tags: ["Python", "CNN", "Machine Learning"],
+      desc: "Membangun model machine learning untuk mengklasifikasikan ekspresi dan emosi menggunakan algoritma Convolutional Neural Network."
+    },
+    {
+      title: "Klasifikasi Batik Indonesia",
+      src: "assets/batik.png", // Kosongkan atau isi path gambar Anda
+      link: "https://github.com/DRoDREW/klasifikasi-batik",
+      tags: ["Python", "SVM", "ResNet", "MobileNet"],
+      desc: "Eksplorasi klasifikasi pola batik Nusantara menggunakan beragam algoritma seperti SVM Linear, Neural Network, Decision Tree, hingga arsitektur transfer learning (ResNet, Xception, MobileNet, EfficientNet)."
+    },
+    {
+      title: "AI Text Detection",
+      src: "assets/output.png", // Kosongkan atau isi path gambar Anda
+      link: "https://github.com/DRoDREW/AI-Text-detection",
+      tags: ["Python", "NLP", "Random Forest"],
+      desc: "Merekayasa sistem untuk mendeteksi dan membedakan antara teks buatan manusia dan konten AI dengan membandingkan algoritma SVM, Random Forest, serta CNN."
+    },
+    {
       title: "Self-Driving Car NN",
       src: "assets/self_driving.png",
       link: "https://github.com/DRoDREW/self-driving-car-nn-java",
@@ -261,18 +282,16 @@ document.querySelectorAll('a, button').forEach(el => {
   colRight.className = 'card-col col-right-stagger';
 
   projects.forEach((p, i) => {
-    // 1. Bungkus dengan .reveal agar animasinya 100% SAMA seperti teks/elemen lain
     const revealWrapper = document.createElement('div');
     revealWrapper.className = 'reveal'; 
     
-    // 2. Card dengan rotasinya diletakkan DI DALAM wrapper tersebut
     const card = document.createElement('div');
     card.className = 'project-card'; 
     card.style.transform = `rotate(${ROTATIONS[i % ROTATIONS.length]}deg)`;
 
     card.innerHTML = `
       <div class="card-inner-padding">
-        <img class="card-img" src="${p.src}" alt="${p.title}" draggable="false"/>
+        <img class="card-img" src="${p.src}" alt="${p.title}" onerror="this.style.display='none'" draggable="false"/>
       </div>
       <p class="card-desc">${p.desc}</p>
       <div class="card-body">

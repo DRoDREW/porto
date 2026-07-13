@@ -181,17 +181,17 @@ nav a:hover::after { width: 100%; }
 .velocity-item .dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; display: inline-block; flex-shrink: 0; }
 .tech-icon { display: inline-flex; align-items: center; gap: 6px; opacity: 0.8; }
 
-/* ────── ABOUT ────── */
+/* ────── ABOUT (DIUBAH MENJADI VERTIKAL/TUMPUK) ────── */
 #about {
-  max-width: 1200px; margin: 0 auto; padding: 120px 48px; display: grid;
-  grid-template-columns: 300px 1fr; gap: 80px; align-items: start;
+  max-width: 1200px; margin: 0 auto; padding: 120px 48px 60px; 
+  display: flex; flex-direction: column; gap: 40px;
 }
 .about-label {
-  font-family: var(--font-display); font-size: 2.6rem; font-weight: 700;
-  line-height: 1.1; letter-spacing: -0.02em; position: sticky; top: 100px; font-style: italic;
+  font-family: var(--font-display); font-size: 3rem; font-weight: 700;
+  line-height: 1.1; letter-spacing: -0.02em; font-style: italic; margin-bottom: 10px;
 }
 .about-label span { color: var(--muted); font-weight: 400; }
-.about-content { space-y: 40px; }
+.about-content { width: 100%; max-width: 900px; }
 .about-text { font-size: 1.1rem; line-height: 1.8; color: #444; margin-bottom: 24px; }
 .about-text strong { color: var(--ink); font-weight: 600; }
 
@@ -233,9 +233,45 @@ nav a:hover::after { width: 100%; }
 }
 .cal-tooltip.visible { opacity: 1; }
 
+/* ────── CERTIFICATIONS SECTION ────── */
+#certifications {
+  max-width: 1200px; margin: 0 auto; padding: 40px 48px 100px;
+}
+.cert-header { margin-bottom: 40px; }
+.cert-header h2 {
+  font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700; font-style: italic; color: var(--ink); margin-bottom: 8px;
+}
+.cert-header p { color: var(--muted); font-size: 1.05rem; }
+
+.cert-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;
+}
+.cert-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex; flex-direction: column;
+}
+.cert-card:hover { transform: translateY(-6px); box-shadow: 0 16px 32px rgba(0,0,0,0.08); }
+.cert-img-placeholder {
+  width: 100%; height: 220px; background: #E9E6DF; position: relative;
+  display: flex; align-items: center; justify-content: center; overflow: hidden;
+}
+.cert-img-placeholder img { width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 2; }
+.cert-fallback {
+  position: absolute; font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); z-index: 1; text-align: center; padding: 0 20px;
+}
+.cert-info { padding: 24px; flex-grow: 1; display: flex; flex-direction: column; }
+.cert-info h3 {
+  font-size: 1.05rem; font-weight: 700; color: var(--ink); margin-bottom: 12px; line-height: 1.4;
+}
+.cert-info p {
+  font-size: 0.85rem; color: var(--muted); line-height: 1.6; margin-bottom: 0;
+}
+
 /* ────── PROJECTS (GRID KIRI KANAN) ────── */
 #projects {
-  background: var(--ink); border-radius: 48px 48px 0 0; margin-top: 60px;
+  background: var(--ink); border-radius: 48px 48px 0 0; margin-top: 20px;
   padding: 100px 0; position: relative; overflow: hidden;
 }
 .projects-header { text-align: center; margin-bottom: 60px; padding: 0 48px; }
@@ -286,7 +322,7 @@ nav a:hover::after { width: 100%; }
 @media (min-width: 640px) { .project-card .card-img { height: 320px; } }
 
 .card-inner-padding { padding: 10px 10px 0; }
-.card-inner-padding .card-img { border-radius: 12px; }
+.card-inner-padding .card-img { border-radius: 12px; background: #EBEBEB; }
 
 .card-body {
   padding: 18px 22px 20px; display: flex; align-items: center; justify-content: space-between;
@@ -387,7 +423,8 @@ footer { background: var(--ink); color: var(--bg); padding: 72px 48px 40px; }
 @media (max-width: 768px) {
   header { padding: 16px 24px; } nav, .header-cta { display: none; }
   #hero { grid-template-columns: 1fr; padding: 120px 24px 60px; gap: 40px; } .hero-photo-col { order: -1; }
-  #about { grid-template-columns: 1fr; padding: 80px 24px; gap: 40px; } .about-label { position: static; font-size: 2rem; } .stats-row { grid-template-columns: 1fr; }
+  #about { padding: 80px 24px; gap: 40px; } .stats-row { grid-template-columns: 1fr; }
+  #certifications { padding: 20px 24px 80px; }
   #velocity-section { transform: rotate(-1deg) scaleX(1.02); }
   footer { padding: 28px 24px; flex-direction: column; align-items: flex-start; } #contact { padding: 100px 24px; }
 }
