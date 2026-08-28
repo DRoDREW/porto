@@ -269,6 +269,36 @@ nav a:hover::after { width: 100%; }
   font-size: 0.85rem; color: var(--muted); line-height: 1.6; margin-bottom: 0;
 }
 
+/* ────── EXPERIENCE ────── */
+#experience {
+  max-width: 1200px; margin: 0 auto; padding: 20px 48px 120px;
+}
+.experience-header { margin-bottom: 48px; }
+.experience-header h2 {
+  font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700; font-style: italic; color: var(--ink); margin-bottom: 8px;
+}
+.experience-header p { color: var(--muted); font-size: 1.05rem; }
+.experience-list { border-top: 1px solid var(--border); }
+.experience-item {
+  display: grid; grid-template-columns: 220px 24px 1fr; gap: 28px;
+  align-items: start; padding: 30px 0; border-bottom: 1px solid var(--border);
+}
+.experience-period {
+  font-family: var(--font-mono); font-size: 0.72rem; line-height: 1.6;
+  letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); padding-top: 5px;
+}
+.experience-marker {
+  width: 11px; height: 11px; margin-top: 7px; border: 2px solid var(--accent2);
+  border-radius: 50%; background: var(--bg); box-shadow: 0 0 0 5px var(--bg), 0 0 0 6px var(--border);
+}
+.experience-details h3 {
+  font-family: var(--font-display); font-size: clamp(1.35rem, 2.5vw, 2rem);
+  font-weight: 700; line-height: 1.2; margin-bottom: 7px;
+}
+.experience-details h3 span { color: var(--muted); font-weight: 400; }
+.experience-details p { color: var(--accent2); font-size: 0.9rem; font-weight: 600; }
+
 /* ────── PROJECTS (GRID KIRI KANAN) ────── */
 #projects {
   background: var(--ink); border-radius: 48px 48px 0 0; margin-top: 20px;
@@ -425,6 +455,11 @@ footer { background: var(--ink); color: var(--bg); padding: 72px 48px 40px; }
   #hero { grid-template-columns: 1fr; padding: 120px 24px 60px; gap: 40px; } .hero-photo-col { order: -1; }
   #about { padding: 80px 24px; gap: 40px; } .stats-row { grid-template-columns: 1fr; }
   #certifications { padding: 20px 24px 80px; }
+  #experience { padding: 20px 24px 80px; }
+  .experience-item { grid-template-columns: 18px 1fr; gap: 18px; padding: 24px 0; }
+  .experience-period { grid-column: 2; grid-row: 1; padding-top: 0; }
+  .experience-marker { grid-column: 1; grid-row: 1 / span 2; margin-top: 4px; }
+  .experience-details { grid-column: 2; grid-row: 2; }
   #velocity-section { transform: rotate(-1deg) scaleX(1.02); }
   footer { padding: 28px 24px; flex-direction: column; align-items: flex-start; } #contact { padding: 100px 24px; }
 }
